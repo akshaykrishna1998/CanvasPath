@@ -1,0 +1,55 @@
+
+   <head>
+       <link rel="stylesheet" href="table_css.css">
+   </head>
+
+    <script src="http://www.amcharts.com/lib/3/amcharts.js" type="text/javascript"></script>
+<script src="http://www.amcharts.com/lib/3/serial.js" type="text/javascript"></script>
+   <script src="table_js.js" type="text/javascript"></script>
+
+<div id="chartdiv" style="height: 355px;"></div>
+<div id="data-table">
+    <div class="data-row">
+        <input class="data-cell data-category" value="USA" />
+        <input class="data-cell data-value" value="4000" type="number" step="10" />
+        <input class="data-button delete-button" type="button" value="X" />
+    </div>
+    <div class="data-row">
+        <input class="data-cell data-category" value="China" />
+        <input class="data-cell data-value" value="1882" type="number" step="10" />
+        <input class="data-button delete-button" type="button" value="X" />
+    </div>
+    <div class="data-row">
+        <input class="data-cell data-category" value="Japan" />
+        <input class="data-cell data-value" value="1809" type="number" step="10" />
+        <input class="data-button delete-button" type="button" value="X" />
+    </div>
+    <div class="data-row">
+        <input class="data-cell data-category" value="Germany" />
+        <input class="data-cell data-value" value="1322" type="number" step="10" />
+        <input class="data-button delete-button" type="button" value="X" />
+    </div>
+    <div class="data-row">
+        <input class="data-cell data-category" value="UK" />
+        <input class="data-cell data-value" value="1122" type="number" step="10" />
+        <input class="data-button delete-button" type="button" value="X" />
+    </div>
+</div>
+   <div id="out"></div>
+<br />
+<input type="button" value="Add Row" onclick="addRow()" class="data-button" id="add-row" />
+
+
+   <script>
+       document.addEventListener("click", function (e) {
+    var level = 0;
+    for (var element = e.target; element; element = element.parentNode) {
+    if (element.id === 'data-table') {
+        document.getElementById("out").innerHTML = (level ? "inner " : "") + "x clicked";
+      return;
+    }
+    level++;
+    }
+    document.getElementById("out").innerHTML = "not x clicked";
+    });
+   </script>

@@ -1,0 +1,26 @@
+body {
+    font-size: 12px;
+    font-family: Verdana;
+}
+#data-table {
+    border: 1px solid #ccc;
+    display: table;
+    padding: 3px;
+}
+#data-table .data-row {
+    display: table-row;
+}
+#data-table .data-cell {
+    padding: 1px 5px;
+    border: 1px dotted #ccc;
+    margin: 3px;
+    min-height: 25px;
+    min-width: 100px;
+    cursor: pointer;
+}
+#data-table .data-cell input {
+    max-width: 100px;
+}
+.data-button {
+    padding: 5px;
+}
